@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="adjacent-sibling-selector.css">
+    <title>Title</title>
+</head>
+<body>
+<p>Een adjacent sibling selector geldt voor het eerst volgende element na een ander element maar wel op dezelfde hoogte
+li + li laat alleen de eerste van iedere verdieping normaal want de derde komt na de tweede en de vierde na de derde
+</p>
+<article>
+    <h2>Deze titel is Descendant van article</h2>
+    <p>
+        Dit is de eerste paragraaf na article maar volgt niet
+    </p>
+    <div>
+        <h2>
+            Deze titel is ook Descendant van article dat div ertussen staat maakt niet uit
+        </h2>
+        <p>
+            Dit is de tweede paragraaf na article
+        </p>
+    </div>
+</article>
+<article>
+    <p>
+        Dit is weer de eerste paragraaf na article maar volgt wel direct
+    </p>
+    <div>
+        <h2>
+            Deze titel is ook Descendant van article dat div ertussen staat maakt niet uit
+        </h2>
+        <p>
+            Dit is weer de tweede paragraaf na article
+        </p>
+    </div>
+</article>
+
+<ul>
+    <li>
+        De eerste verdieping list item normaal een disk
+        <ul>
+            <li class="first">
+                De tweede verdieping list item normaal een circle
+                <ul>
+                    <li class="first">De derde verdieping list item normaal een squar</li>
+                    <li>De derde verdieping list item normaal een squar</li>
+                    <li>De derde verdieping list item normaal een squar</li>
+                    <li>De derde verdieping list item normaal een squar</li>
+                </ul>m
+            </li>
+            <li>De tweede verdieping list item normaal een circle</li>
+            <li>De tweede verdieping list item normaal een circle</li>
+        </ul>
+    </li>
+    <li>
+        De eerste verdieping list item normaal een disk
+        <ul>
+            <li>De tweede verdieping list item normaal een circle</li>
+            <li>De tweede verdieping list item normaal een circle</li>
+            <li>De tweede verdieping list item normaal een circle</li>
+        </ul>
+    </li>
+    <li>
+        De eerste verdieping list item normaal een disk
+    </li>
+    <li>
+        De eerste verdieping list item normaal een disk
+    </li>
+    <li>
+        De eerste verdieping list item normaal een disk
+        <ul>
+            <li>De tweede verdieping list item normaal een circle</li>
+            <li>
+                De tweede verdieping list item normaal een circle
+                <ul>
+                    <li>De derde verdieping list item normaal een squar</li>
+                    <li>De derde verdieping list item normaal een squar</li>
+                    <li>De derde verdieping list item normaal een squar</li>
+                    <li>De derde verdieping list item normaal een square</li>
+                </ul>
+            </li>
+            <li>De tweede verdieping list item normaal een circle</li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>

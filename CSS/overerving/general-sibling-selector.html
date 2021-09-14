@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="general-sibling-selector.css">
+    <title>General sibling selector</title>
+</head>
+<body>
+<p>test tekst voor de pagina titel deze blijft hetzelfde</p>
+<h1>Pagina titel staat in de root</h1>
+<p>
+    Een general sibling selector geldt voor alle keren dat dat element op dezelfde hoogte
+    voorkomt na het parent elemet
+    in dit geval parent h1 en sibling p h1 ~ p
+    als je onverhoopt een h1 op een andere hoogte gebruikt kan je problemen krijgen
+    want dan wordt ook opeens die hoogte meeveranderd
+    dus beter een element dat je maar 1 keer gebruikt zoals body
+    of een element dat als je het al twee keer gebruikt steeds op dezelfde hoogte staat
+</p>
+<article>
+    <h1>foutje bedankt</h1>
+    <!--  <h2>Deze titel is Descendant van article</h2>-->
+    <p>
+        Dit is de eerste paragraaf na article maar volgt niet
+    </p>
+    <div>
+        <h2>
+            Deze titel is ook Descendant van article dat div ertussen staat maakt niet uit
+        </h2>
+        <p>
+            Dit is de tweede paragraaf na article
+        </p>
+    </div>
+</article>
+<article>
+    <p>
+        Dit is weer de eerste paragraaf na article maar volgt wel direct
+    </p>
+    <div>
+        <h2>
+            Deze titel is ook Descendant van article dat div ertussen staat maakt niet uit
+        </h2>
+        <p>
+            Dit is weer de tweede paragraaf na article
+        </p>
+    </div>
+</article>
+<p>test tekst in de root</p>
+<ul>
+    <li>
+        De eerste verdieping list item normaal een disk
+        <ul>
+            <li class="first">
+                De tweede verdieping list item normaal een circle
+                <ul>
+                    <li class="first">De derde verdieping list item normaal een squar</li>
+                    <li>De derde verdieping list item normaal een squar</li>
+                    <li>De derde verdieping list item normaal een squar</li>
+                    <li>De derde verdieping list item normaal een squar</li>
+                </ul>
+                m
+            </li>
+            <li>De tweede verdieping list item normaal een circle</li>
+            <li>De tweede verdieping list item normaal een circle</li>
+        </ul>
+    </li>
+    <li>
+        De eerste verdieping list item normaal een disk
+        <ul>
+            <li>De tweede verdieping list item normaal een circle</li>
+            <li>De tweede verdieping list item normaal een circle</li>
+            <li>De tweede verdieping list item normaal een circle</li>
+        </ul>
+    </li>
+    <li>
+        De eerste verdieping list item normaal een disk
+    </li>
+    <li>
+        De eerste verdieping list item normaal een disk
+    </li>
+    <li>
+        De eerste verdieping list item normaal een disk
+        <ul>
+            <li>De tweede verdieping list item normaal een circle</li>
+            <li>
+                De tweede verdieping list item normaal een circle
+                <ul>
+                    <li>De derde verdieping list item normaal een squar</li>
+                    <li>De derde verdieping list item normaal een squar</li>
+                    <li>De derde verdieping list item normaal een squar</li>
+                    <li>De derde verdieping list item normaal een square</li>
+                </ul>
+            </li>
+            <li>De tweede verdieping list item normaal een circle</li>
+        </ul>
+    </li>
+</ul>
+<p>weer test tekst in de root</p>
+</body>
+</html>

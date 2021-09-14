@@ -1,0 +1,30 @@
+.animate {
+    max-width: 900px;
+}
+a {
+    display: inline-block;
+}
+
+a,
+a:link,
+a:visited {
+    font-family: helvetica, 'Helvetica', sans-serif;
+    font-size: 30px;
+    color: #d84282;
+    text-decoration: none;
+}
+
+/*BEGINSTAAT*/
+a::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 3px;
+    background-color: #d84282;
+    transition: width 0.35s ease-in-out;
+}
+
+/*EINDSTAAT*/
+a:hover::after {
+    width: 100%;
+}

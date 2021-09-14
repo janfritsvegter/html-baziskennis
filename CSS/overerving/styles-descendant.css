@@ -1,0 +1,6 @@
+article  p { color: white; background-color: black}
+article  h2 {color: red}
+
+li {list-style-type: decimal}
+li li {list-style-type: upper-roman}
+li li li {list-style-type: armenian}

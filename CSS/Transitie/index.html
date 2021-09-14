@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    Hallo. Weer een vraag: Ik ben nu bezig met hfst 9.5 van html&css op edhub.
+    Ik heb de code uit het voorbeedl gekopieerd, maar het streepje wordt
+    bij mij pagina-breed ipv <a>-breed.</a> Wat doe ik fout?
+
+    a, a:link, a:visited {
+    font-family: helvetica, sans-serif;
+    font-size: 30px;
+    color: #D84282;
+    text-decoration: none;
+    }
+
+    /*BEGINSTAAT*/
+    a::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 3px;
+    background-color: #D84282;
+    transition: width .35s ease-in-out;
+    }
+
+    /*EINDSTAAT*/
+    a:hover::after {
+    width: 100%
+    }
+</p>
+<p>
+    Die vraag is voor Front-end
+    Maar het antwoord is: jouw code en die van EdHub kloppen wel maar: je plaatst een
+    Block element achter een 100% breedte element, dus dan wordt alles 100% breed; je kunt dit
+    oplossen door van de A een inline-block te maken, maar wat je erachter plaatst met ::After
+    moet nog steeds een Block zijn, zie mijn pen: https://codepen.io/jirosworld/pen/NWgjZOZ
+    ( + nog een detail: je laatste CSS declaratie mist nog een punt-komma, maar dat heeft hier geen invloed ).
+</p>
+<p>
+    bedankt Jiro. Ik heb inderdaad de verkeerde teams, helaas . Je oplossing werkt inderdaad, bedankt!
+    zeg ik het goed als ik zeg dat het verschil tussen inline(<a> van nature)</a> en inline-block dus is
+    dat inline de hele breedte omslaat en inline-block alleen de benodigde breedte?
+</p>
+<p>
+    Neen, inline-block is een raar afwijkend Display dingetje dat precies hetzelfde is
+    als inline (dus deze nemen allebei alléén de beschikbare ruimte op een 'regel'
+    in - dus als de beschikbare ruimte op is dan klappen ze naar de volgende 'regel')
+    maar inline-block is alleen bedacht zodat je elementen nog een zelfgewenste breedte/hoogte
+    mee kunt geven. Inline is nooit uitzichzelf 100%, alleen als je content/woord
+    toevallig net zo breed is als het scherm(=regel).
+    De code van EdHub hier was verwarrend omdat ze een Block achter een Inline plakken
+    en dat doe je normaal niet; meestal ga je dit soort dingen doen met een A-element
+    in een LI element in een UL voor een leuk Horizontaal menu (ik heb de Codepen nu
+    bijgewerkt met een UL er in), en als de LI's naast elkaar staan dan hoef je
+    geen inline-block meer aan te geven).
+</p>
+<div class="animate">
+    <a href="/">Naar de webshop</a>
+</div>
+</body>
+</html>

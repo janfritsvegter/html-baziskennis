@@ -1,0 +1,49 @@
+body {
+    background: #eeeeee;
+}
+div{
+    width: 0;
+    height: 0;
+
+}
+section {
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+
+.driehoek-rechts{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-left: 50px solid #FF69B4;
+    border-bottom: 50px solid #EEEEEE;
+    border-top: 50px solid #EEEEEE;
+}
+
+.driehoek-boven{
+    position: absolute;
+    top: 55px;
+    left: 55px;
+    border-bottom: 50px solid #FF69B4;
+    border-right: 50px solid #EEEEEE;
+    border-left: 50px solid #EEEEEE;
+}
+
+.driehoek-onder{
+    position: absolute;
+    top: 5px;
+    left: 110px;
+    border-top: 50px solid #FF69B4;
+    border-right: 50px solid #EEEEEE;
+    border-left: 50px solid #EEEEEE;
+}
+
+.driehoek-links{
+    position: absolute;
+    top: 5px;
+    left: 225px;
+    border-right: 50px solid #FF69B4;
+    border-bottom: 50px solid #EEEEEE;
+    border-top: 50px solid #EEEEEE;
+}

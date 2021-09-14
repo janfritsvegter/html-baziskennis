@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles-descendant.css">
+    <title>Descendant selector</title>
+</head>
+<body>
+<p>Een child selector geldt voor een element dat direct child is van dat element maar niet van een ander element </p>
+<article>
+    <h2>Deze titel is Descendant van article</h2>
+    <p>
+        Deze tekst is Descendant van article
+    </p>
+    <div>
+        <h2>
+            Deze titel is ook Descendant van article dat div ertussen staat maakt niet uit
+        </h2>
+        <p>
+            Deze tekst is ook Descendant van article dat div ertussen staat maakt niet uit
+        </p>
+    </div>
+</article>
+<p>
+    de eerste verdieping is gewoon een li
+    maar als je in de CSS alleen een li zet dan zijn de tweede en de derde verdieping
+    ook gewoon li elementen en geld het li voor allemaal
+
+    als je een li li plaatst zonder een li dan gebeurd er niets
+    maar met een li element dan geldt li li voor alle li elementen
+    na de eerste verdieping en maakt niet uit wat er tussen staat
+    dus ook de derde verdieping wordt meegenomen
+
+    pas bij li li li wordt de derde verdieping apart behandeld.
+</p>
+<ul>
+    <li>
+        De eerste verdieping list item normaal een disk
+        <ul>
+            <li>
+                De tweede verdieping list item normaal een circle
+                <ul>
+                    <li>De derde verdieping list item normaal een squar</li>
+                    <li>De derde verdieping list item normaal een squar</li>
+                    <li>De derde verdieping list item normaal een squar</li>
+                    <li>De derde verdieping list item normaal een squar</li>
+                </ul>m
+            </li>
+            <li>De tweede verdieping list item normaal een circle</li>
+            <li>De tweede verdieping list item normaal een circle</li>
+        </ul>
+    </li>
+    <li>
+        De eerste verdieping list item normaal een disk
+        <ul>
+            <li>De tweede verdieping list item normaal een circle</li>
+            <li>De tweede verdieping list item normaal een circle</li>
+            <li>De tweede verdieping list item normaal een circle</li>
+        </ul>
+    </li>
+    <li>
+        De eerste verdieping list item normaal een disk
+    </li>
+    <li>
+        De eerste verdieping list item normaal een disk
+    </li>
+    <li>
+        De eerste verdieping list item normaal een disk
+        <ul>
+            <li>De tweede verdieping list item normaal een circle</li>
+            <li>
+                De tweede verdieping list item normaal een circle
+                <ul>
+                    <li>De derde verdieping list item normaal een squar</li>
+                    <li>De derde verdieping list item normaal een squar</li>
+                    <li>De derde verdieping list item normaal een squar</li>
+                    <li>De derde verdieping list item normaal een square</li>
+                </ul>
+            </li>
+            <li>De tweede verdieping list item normaal een circle</li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Ballet&display=swap');
+
+.product-card {
+    color: white;
+    border: 1px solid deeppink;
+    background-color: hotpink;
+}
+
+.product-card2 {
+    color: #FFF;
+    border: 1px solid #FF1493;
+    background-color: #FF69B4;
+}
+.product-card3 {
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(255, 105, 180);
+    background-color: rgb(255, 20, 147);
+}
+.product-card4 {
+    color: hsl(0, 0%, 100%);
+    border: 1px solid hsl(0, 70%, 25%);
+    background-color: hsl(0, 53%, 70%);
+}
+.highlighted-article {
+    font-family: freebooterscrip, Arial, sans-serif;
+    background-color: red;
+}
+
+#footer-small {
+    height: 100px;
+}
+
+.ballet{
+    font-family: 'Ballet', cursive;
+    font-size: 60px;
+}
